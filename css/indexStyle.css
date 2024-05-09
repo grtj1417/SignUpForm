@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "myFont1";
+  src: url("/fonts/Norse-Bold.otf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myFont2";
+  src: url("/fonts/sourcecodepro-regular-webfont.woff2") format("woff2"),
+    url("fonts/sourcecodepro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myFont3";
+  src: url("/fonts/rubik-regular-webfont.woff2") format("woff2"),
+    url("fonts/rubik-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "myFont3";
+  font-size: 30px;
+  display: flex;
+  margin: 0;
+}
+.backgroundImg {
+  width: 35%;
+  height: 100vh;
+}
+.img1 {
+  width: 35%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+.odin {
+  display: inline-flex;
+  color: rgb(235, 235, 235);
+  font-family: "myfont1";
+  font-size: 8vw;
+  top: 23%;
+  left: 8%;
+  position: absolute;
+  z-index: 3;
+}
+.img2 {
+  width: calc(4vw + 2rem);
+  object-fit: contain;
+}
+@media screen and (max-width: 800px){
+  .img2 {
+    width: calc(3vw + 2rem);
+  }
+}
+@media screen and (max-width: 600px){
+  .img2 {
+    width: 7vw;
+  }
+}
+.odintext {
+  margin: auto 0;
+}
+.gray-backdround {
+  width: 35%;
+  height: calc(10vw + 2rem);
+  background-color: #000000;
+  opacity: 55%;
+  top: 20%;
+  position: absolute;
+  z-index: 2;
+}
+.right {
+  width: 65%;
+  font-size: 22px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.not-a-real {
+  width: clamp(20rem, 50vw, 40rem);
+  margin-left: 6vh;
+}
+.not-a-real :last-child {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+.textBox {
+  padding: 6vh;
+  box-shadow: 0px 2px 2px 2px rgb(0 0 0 / 15%);
+}
+form > div {
+  font-size: 1.2ch;
+  font-family: "myFont2";
+}
+.flex-container1,
+.flex-container2,
+.flex-container3 {
+  display: flex;
+}
+@media screen and (max-width: 760px) {
+  .flex-container1,
+  .flex-container2,
+  .flex-container3 {
+    display: block;
+  }
+}
+.flex-container1 > div,
+.flex-container2 > div,
+.flex-container3 > div {
+  margin-top: 2vh;
+}
+.flex-container1 :first-child > input,
+.flex-container2 :first-child > input,
+.flex-container3 :first-child > input {
+  margin-right: 10vh;
+}
+input {
+  width: 35vh;
+  height: 3.5vh;
+  border: 0.2vh solid #dbdbdb;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  outline: none;
+}
+input:invalid {
+  border-color: red;
+}
+button {
+  width: 30vh;
+  height: 7vh;
+  color: white;
+  font-size: 1.3ch;
+  margin-top: 4vh;
+  margin-left: 6vh;
+  border: 1px white;
+  border-radius: 10px;
+  background-color: #596d48;
+}
+button + div {
+  font-size: 1ch;
+  margin-top: 2.5vh;
+  margin-left: 6.5vh;
+}
+button + div > a {
+  color: #596d48;
+  font-weight: bold;
+  text-decoration: none;
+}
+input:focus {
+  box-shadow: 0px 2px 5px 2px rgb(0 0 0 / 20%);
+  border-color: blue;
+}
