@@ -11,6 +11,7 @@ function validatePassword() {
     var maxNumberofChars = 12;
     var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,12}$/;
     if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
+        
         return false;
     }
     if(!passwordRegex.test(newPassword)) {
@@ -24,7 +25,7 @@ passwordListener.addEventListener("input", () => {
     if(!(validatePassword()) && !ISINVALID){
         ISINVALID = !ISINVALID;
         let alertWord = document.createElement("div");
-        alertWord.textContent = "* Password do not match";
+        alertWord.textContent = "* 請輸入8~12位密碼(至少包含一個數字及英文)"
         passwordListener.parentNode.appendChild(alertWord);
     // 如果已經驗證過是對的或是密碼為空，將alertWord清除
     } else if(validatePassword() || document.querySelector("#user-password").value === ''){
@@ -43,7 +44,7 @@ confirmPasswordListener.addEventListener("input", () => {
     if(confirmPassword !== password && !ISCONFIRMPASSWORD){
         ISCONFIRMPASSWORD = !ISCONFIRMPASSWORD;
         let alertWord = document.createElement("div");
-        alertWord.textContent = "* Password do not match";
+        alertWord.textContent = "* 確認密碼與密碼不符合";
         confirmPasswordListener.parentNode.appendChild(alertWord);
     }else if(confirmPassword === password || confirmPassword === ''){
         let alertWord = confirmPasswordListener.parentNode.querySelector("div");

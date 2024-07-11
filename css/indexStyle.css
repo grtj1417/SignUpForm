@@ -39,10 +39,12 @@ body {
   display: inline-flex;
   color: rgb(235, 235, 235);
   font-family: "myfont1";
-  font-size: 8vw;
-  top: 23%;
-  left: 8%;
-  position: absolute;
+  font-size: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25%;
+  position: relative;
   z-index: 3;
 }
 .img2 {
@@ -60,7 +62,8 @@ body {
   }
 }
 .odintext {
-  margin: auto 0;
+  /* margin: auto 0; */
+  align-self: center;
 }
 .gray-backdround {
   width: 35%;
